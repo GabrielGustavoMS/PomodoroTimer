@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro</title>
     <link rel="stylesheet" href="./styles.css" type="text/css" />
-    
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        Pomodoro Timer
+      Pomodoro Timer
+      <i id="dark" class="moon"></i>
     </header>
-    <section class="container">
-        <p id="countdown"></p>
-        <p id="time-type"></p>   
-    </section>
-    <script src="script.js"></script>
-    <section class="container2">
-        <h1>Pomodoro Technique</h1>
+    <main>
+      <section class="container">
+        <p id="countdown">01 : 00</p>
+        <p id="time-type"></p>
+      </section>
+      <section id="container-on-off">
         <p>
-            The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s.
-            The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato',
-             after the tomato-shaped kitchen timer that Cirillo used as a university student.
-            
-
+          OFF &nbsp;
+          <label class="switch">
+            <input id="btn-on-off" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          &nbsp;ON
         </p>
-        <a href="https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro" target="_blank">Read More</a>
-    </section>
-    <footer>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f5f5f5" fill-opacity="1" d="M0,128L48,133.3C96,139,192,149,288,165.3C384,181,480,203,576,213.3C672,224,768,224,864,229.3C960,235,1056,245,1152,218.7C1248,192,1344,128,1392,96L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-    </footer>
-</body>
+        <p>
+          <img
+            class="arrow"
+            src="expand_less_black_24dp.svg"
+            onclick="increaseMinutes()"
+          />
+          &nbsp; &nbsp; &nbsp; MIN &nbsp; &nbsp; &nbsp;
+          <img
+            class="arrow"
+            src="expand_more_black_24dp.svg"
+            onclick="decreaseMinutes()"
+          />
+        </p>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
