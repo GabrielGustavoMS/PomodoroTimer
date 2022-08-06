@@ -1,3 +1,3 @@
 # PomodoroTimer
-![Preview](./preview.jpeg)
+![Preview](./preview.jpg)
 [Pomodoro Timer](https://gabrielgustavoms.github.io/PomodoroTimer/)
